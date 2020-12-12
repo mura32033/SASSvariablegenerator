@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCSS variable generator</title>
+  <style>
+    label{
+      margin-bottom: 10px;
+    }
+    .container{
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+    }
+    .input_group{
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+    }
+    .input_button{
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+  <div class="desc">
+    <h1>Variable Generator for SASS/SCSS</h1>
+    <h2>What is this?</h2>
+    <p>This tool can generate SASS variables from color palettes.</p>
+    <p>You can easily generate color palettes from the service below.</p>
+    <p>Just paste the palettes data from the service below when you have generated a palette.</p>
+    <a href="https://hihayk.github.io/scale/">https://hihayk.github.io/scale/</a>
+    <h2>How to use</h2>
+    <ol>
+      <li>Insert name of the variable.</li>
+      <li>Paste the palette and push 'Output'.</li>
+      <li>Check the result and push 'Copy' to copy the result to your copyboard.</li>
+    </ol>
+    <h2>Example</h2>
+    <p>Color name: [ red ]</p>
+    <p>Input: [ #803A1B ]</p>
+    <p>Output: [ $red10: #803A1B; ]</p>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="input_group">
+      <label for="varname">Color name</label>
+      <input type="text" id="varname" name="varname">
+    </div>
+    <div class="input_group">
+      <label for="input">Palette</label>
+      <textarea id="input" cols="30" rows="10"></textarea>
+    </div>
+    <div class="input_button">
+      <button type="button" onclick="output()">Output</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="input_group">
+      <label for="output">Output</label>
+      <textarea id="output" cols="30" rows="10"></textarea>
+    </div>
+    <div class="input_button">
+      <button type="button" onclick="copy()">Copy</button>
+    </div>    
+  </div>
+  <script src="./var.js"></script>
+</body>
+</html>
