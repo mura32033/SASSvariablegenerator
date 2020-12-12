@@ -49,6 +49,14 @@
       <input type="text" id="varname" name="varname" placeholder="black">
     </div>
     <div class="input_group">
+      <label for="classcheck">Generate class for SASS/SCSS</label>
+      <input type="checkbox" name="classcheck" id="classcheck">
+    </div>
+    <div class="input_group" id="generateclass" style="display: none;">
+      <label for="classname">Class Name</label>
+      <input type="text" name="classname" id="classname" placeholder="text">
+    </div>
+    <div class="input_group">
       <label for="input">Palette</label>
       <textarea id="input" cols="30" rows="10" placeholder="#dddddd&#13;&#10;#cccccc&#13;&#10;#bbbbbb&#13;&#10;#aaaaaa"></textarea>
     </div>
@@ -60,10 +68,17 @@
     <div class="input_group">
       <label for="output">Output</label>
       <textarea id="output" cols="30" rows="10"></textarea>
+      <div class="input_button">
+        <button type="button" onclick="copy('output')">Copy</button>
+      </div> 
     </div>
-    <div class="input_button">
-      <button type="button" onclick="copy()">Copy</button>
-    </div>    
+    <div class="input_group" id="outputclass" style="display: none;">
+      <label for="outputnest">Class Output</label>
+      <textarea id="outputnest" cols="30" rows="10"></textarea>
+      <div class="input_button">
+        <button type="button" onclick="copy('nest')">Copy</button>
+      </div>
+    </div>
   </div>
   <script src="./var.js"></script>
 </body>
